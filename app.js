@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const session = require("express-session");
 var path = require("path");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-const session = require("express-session");
+app.use(express.static(path.join(__dirname, "./public")));
 
 app.use(
   session({
@@ -15,8 +16,6 @@ app.use(
     cookie: { maxAge: 3600000 }
   })
 );
-
-app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", require("./routes/index.js"));
 
