@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 480px;
+  height: 360px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 2vh;
+  width: 100vw;
+}
+
+.logo {
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+  height: 10vh;
+}
+
+ul {
+  position: absolute;
+  right: 2.5vw;
+  top: 2vh;
+  list-style: none;
+  width: 68vw;
+}
+
+li {
+  display: inline;
+  position: absolute;
+  font-size: 1.3vw;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.nav-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+.student-info {
+  background-color: #972626;
+  width: 23.5vw;
+  height: 47vh;
+  display: flex;
+  flex-direction: column;
+  grid-area: student-info;
+}
+
+main {
+  position: absolute;
+  top: 15vh;
+  left: 3vw;
+  height: 85vh;
+  width: 94vw;
+  /* padding: 0; */
+  display: grid;
+  grid-template-columns: repeat(4, 23.5vw);
+  grid-template-rows: repeat(3, 28.33vh);
+  gap: 2vw;
+  grid-template-areas:
+    "student-info two three four"
+    "student-info six seven eight"
+    "nine ten eleven twelve";
+}
+
+.name {
+  color: #474040;
+  text-align: center;
+}
+
+.student-image {
+  border-radius: 100%;
+  height: 25vh;
+  width: 25vh;
+  align-self: center;
+}

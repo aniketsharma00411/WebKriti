@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
+const expressLayouts = require("express-ejs-layouts");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 var path = require("path");
 
+app.use(expressLayouts);
+app.set("view engine", "ejs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "./public")));

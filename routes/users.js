@@ -78,7 +78,11 @@ router.post("/login", (req, res) => {
         const result = bcrypt.compareSync(password, user.pwdHash);
         if (result) {
           req.session.user = user;
-          res.status(200).send("Hello");
+          res.render("participant_portal", {
+            name: "abc",
+            roll: "2019BCS-XXX",
+            sem: "I"
+          });
         } else {
           res.status(400).send("pwd incorrect");
         }
