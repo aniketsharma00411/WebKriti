@@ -7,26 +7,58 @@
     <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
-    <form action="http://localhost:5000/users/login" method="POST">
-      <div class="container">
-        <label for="email"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="email" required />
+    <header>
+      <nav class="nav-bar">
+        <a href="/"><img src="/assests/logo.png" alt="Logo" class="logo"/></a>
+        <ul>
+          <li>
+            <a href="/">HOME</a>
+          </li>
+          <li style="right: 48.5vw;">
+            <a href="./users/login">LOGIN/REGISTER</a>
+          </li>
+          <li style="right: 39.5vw;">
+            <a href="./event-list.html">EVENTS</a>
+          </li>
+          <li style="right: 28.5vw;">
+            <a href="#">SCHEDULE</a>
+          </li>
+          <li style="right: 12vw;">
+            <a href="#">ACCOMMODATION</a>
+          </li>
+          <li style="right: 0vw;">
+            <a href="#">CONTACT US</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="http://localhost:5000/users/login" method="POST">
+        <div class="container">
+          <label for="email"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="email"
+            required
+          />
 
-        <label for="password"><b>Password</b></label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="password"
-          required
-        />
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            required
+          />
 
-        <button type="submit">Login</button>
-      </div>
+          <button type="submit">Login</button>
+        </div>
 
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
-      </div>
-    </form>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </main>
   </body>
 </html>

@@ -7,6 +7,7 @@ let user;
 var path = require("path");
 
 app.use(express.static(path.join(__dirname + "../public/css")));
+app.use(express.static(path.join(__dirname, "./public/assests")));
 
 router.get("/register", (req, res) => {
   if (!req.session.user) {
