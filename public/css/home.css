@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,13 +9,18 @@
 }
 
 body {
-  background-color: rgb(243, 243, 233);
+  background: linear-gradient(to right, #545cda, #49d2ff);
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
+header {
+  background-color: #32323f;
+  width: 100vw;
+  height: 10vh;
+}
 .nav-bar {
   position: absolute;
   top: 2vh;
@@ -41,7 +50,8 @@ li {
 
 a {
   text-decoration: none;
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   color: #ffffff;
 }
 
@@ -49,70 +59,52 @@ a {
   text-decoration: underline;
 }
 
-.glitch {
+.background {
   position: absolute;
-  /* top: 13vh; */
-  width: 100vw;
+  bottom: 0;
+  right: 0;
+  width: 50vw;
   z-index: -1;
 }
 
-.theme-head {
+.info {
+  width: 45vw;
   position: absolute;
-  top: 125vh;
-  left: 13vw;
-  font-size: 4vw;
-}
-
-.theme {
-  width: 55vw;
-  height: 40vh;
-  border-radius: 13%;
-  background-color: rgb(10, 161, 78);
-  position: absolute;
-  top: 110vh;
-  right: 5vw;
-}
-
-.theme-info {
-  padding: 2vw;
-  text-align: center;
-  position: absolute;
-  top: 3vh;
-  font-size: 1.4vw;
-}
-
-.about-head {
-  position: absolute;
-  top: 170vh;
-  right: 13vw;
-  font-size: 4vw;
-}
-
-.about {
-  width: 55vw;
-  height: 40vh;
-  border-radius: 13%;
-  background-color: rgb(172, 159, 45);
-  position: absolute;
-  top: 155vh;
+  top: 25vh;
   left: 5vw;
 }
 
-.about-info {
-  padding: 2vw;
-  text-align: center;
+.tech {
   position: absolute;
-  top: 3vh;
-  font-size: 1.4vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 8vw;
+}
+
+.fest {
+  position: absolute;
+  top: 13vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #00ffff;
+  font-size: 8vw;
+}
+
+.info-info {
+  position: absolute;
+  top: 35vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
 }
 
 footer {
-  background-color: rgb(185, 98, 163);
+  background-color: #2669b6;
   position: absolute;
-  top: 205vh;
+  top: 100vh;
   width: 100vw;
   height: 50vh;
-  font-weight: bold;
 }
 
 .connect {
@@ -121,6 +113,8 @@ footer {
   position: absolute;
   top: 16vh;
   left: 10vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 footer img {
