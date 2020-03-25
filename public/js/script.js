@@ -59,19 +59,19 @@ function eventChange() {
 function eventPage() {
   switch (event) {
     case 1:
-      document.getElementById("register").href = "event1.html";
+      document.getElementById("register").href = "event1";
       break;
     case 2:
-      document.getElementById("register").href = "event2.html";
+      document.getElementById("register").href = "event2";
       break;
     case 3:
-      document.getElementById("register").href = "event3.html";
+      document.getElementById("register").href = "event3";
       break;
     case 4:
-      document.getElementById("register").href = "event4.html";
+      document.getElementById("register").href = "event4";
       break;
     case 5:
-      document.getElementById("register").href = "event5.html";
+      document.getElementById("register").href = "event5";
       break;
   }
 }
