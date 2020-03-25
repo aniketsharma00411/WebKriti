@@ -23,7 +23,8 @@ router.get("/login", (req, res) => {
 
 router.post("/register", (req, res) => {
   const { name, email, password, password2, phone } = req.body;
-
+  password = bcrypt.hashSync(password, 10);
+  password2 = bcrypt.hashSync(password2, 10);
   let errors = [];
 
   if (!name || !email || !password || !password2 || !phone) {
@@ -51,7 +52,7 @@ router.post("/register", (req, res) => {
 
         res.send(errors);
       } else {
-        pwdHash = bcrypt.hashSync(password, 10);
+        pwdHash = password;
 
         var sql = `INSERT INTO users (name, email, phone, pwdHash) VALUES ?`;
 
@@ -68,6 +69,7 @@ router.post("/register", (req, res) => {
 
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
+  password = bcrypt.hashSync(password, 10);
   mySqlConnection.query(
     "SELECT * FROM users WHERE email = ?",
     [email],
@@ -75,7 +77,7 @@ router.post("/login", (req, res) => {
       if (err) res.status(500).send(err);
       user = rows[0];
       if (user) {
-        const result = bcrypt.compareSync(password, user.pwdHash);
+        const result = password === user.pwdHash ? 1 : 0;
         if (result) {
           req.session.user = user;
           res.render("participant_portal", {
