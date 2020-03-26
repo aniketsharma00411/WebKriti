@@ -21,22 +21,30 @@ router.get("/login", (req, res) => {
   else res.status(401).send("nope, logout");
 });
 
+// Registration Page
 router.post("/register", (req, res) => {
-  const { name, email, password, password2, phone } = req.body;
-  password = bcrypt.hashSync(password, 10);
-  password2 = bcrypt.hashSync(password2, 10);
-  let errors = [];
+  let { email, name, password, password2, college, phone } = req.body;
+  let event1 = 0,
+    event2 = 0,
+    event3 = 0,
+    event4 = 0,
+    event5 = 0,
+    accommodation = 0;
 
-  if (!name || !email || !password || !password2 || !phone) {
-    errors.push({ msg: "Please enter all fields" });
+  if (password.length < 6) {
+    errors.push({ msg: "Password must be at least 6 characters" });
   }
 
   if (password != password2) {
     errors.push({ msg: "Passwords do not match" });
   }
 
-  if (password.length < 6) {
-    errors.push({ msg: "Password must be at least 6 characters" });
+  password = bcrypt.hashSync(password, 10);
+  password2 = bcrypt.hashSync(password2, 10);
+  let errors = [];
+
+  if (!name || !email || !password || !password2 || !college || !phone) {
+    errors.push({ msg: "Please enter all fields" });
   }
 
   mySqlConnection.query(
@@ -52,21 +60,35 @@ router.post("/register", (req, res) => {
 
         res.send(errors);
       } else {
-        pwdHash = password;
+        var sql = `INSERT INTO users (email, name, pwdhash, college, event1, event2, event3, event4, event5, accommodation, phone) VALUES ?`;
 
-        var sql = `INSERT INTO users (name, email, phone, pwdHash) VALUES ?`;
-
-        const values = [[name, email, phone, pwdHash]];
+        const values = [
+          [
+            email,
+            name,
+            password,
+            college,
+            event1,
+            event2,
+            event3,
+            event4,
+            event5,
+            accommodation,
+            phone
+          ]
+        ];
 
         mySqlConnection.query(sql, [values], function(err) {
           if (err) res.status(500).send(err);
-          else res.status(200).send("successfully registered");
+          else
+            res.status(200).sendFile(path.join(__dirname + "/../login.html"));
         });
       }
     }
   );
 });
 
+//Login Page
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   password = bcrypt.hashSync(password, 10);
@@ -80,11 +102,12 @@ router.post("/login", (req, res) => {
         const result = password === user.pwdHash ? 1 : 0;
         if (result) {
           req.session.user = user;
-          res.render("participant_portal", {
-            name: "abc",
-            roll: "2019BCS-XXX",
-            sem: "I"
-          });
+          // res.render("participant_portal", {
+          //   name: "abc",
+          //   roll: "2019BCS-XXX",
+          //   sem: "I"
+          // });
+          res.status(200).send("Logged in successfully");
         } else {
           res.status(400).send("pwd incorrect");
         }
