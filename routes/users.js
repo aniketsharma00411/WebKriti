@@ -35,17 +35,18 @@ router.post("/register", (req, res) => {
     errors.push({ msg: "Password must be at least 6 characters" });
   }
 
+  let errors = [];
+
+  if (!name || !email || !password || !password2 || !college || !phone) {
+    errors.push({ msg: "Please enter all fields" });
+  }
+
   if (password != password2) {
     errors.push({ msg: "Passwords do not match" });
   }
 
   password = bcrypt.hashSync(password, 10);
   password2 = bcrypt.hashSync(password2, 10);
-  let errors = [];
-
-  if (!name || !email || !password || !password2 || !college || !phone) {
-    errors.push({ msg: "Please enter all fields" });
-  }
 
   mySqlConnection.query(
     "SELECT * FROM users WHERE email = ?",
@@ -91,7 +92,6 @@ router.post("/register", (req, res) => {
 //Login Page
 router.post("/login", (req, res) => {
   let { email, password } = req.body;
-  password = bcrypt.hashSync(password, 10);
   mySqlConnection.query(
     "SELECT * FROM users WHERE email = ?",
     [email],
@@ -99,7 +99,8 @@ router.post("/login", (req, res) => {
       if (err) res.status(500).send(err);
       user = rows[0];
       if (user) {
-        const result = password === user.pwdHash ? 1 : 0;
+        const result = bcrypt.compareSync(password, user.pwdhash);
+        password = bcrypt.hashSync(password, 10);
         if (result) {
           req.session.user = user;
           // res.render("participant_portal", {
@@ -107,7 +108,7 @@ router.post("/login", (req, res) => {
           //   roll: "2019BCS-XXX",
           //   sem: "I"
           // });
-          res.status(200).send("Logged in successfully");
+          res.status(200).sendFile(path.join(__dirname + "/../home.html"));
         } else {
           res.status(400).send("pwd incorrect");
         }
