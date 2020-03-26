@@ -90,7 +90,7 @@ router.post("/register", (req, res) => {
 
 //Login Page
 router.post("/login", (req, res) => {
-  const { email, password } = req.body;
+  let { email, password } = req.body;
   password = bcrypt.hashSync(password, 10);
   mySqlConnection.query(
     "SELECT * FROM users WHERE email = ?",
