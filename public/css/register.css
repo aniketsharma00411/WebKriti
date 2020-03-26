@@ -77,15 +77,14 @@ a {
   width: 30vw;
 }
 
-.login {
+.register {
   position: absolute;
-  top: 5vh;
   right: 38vw;
 }
 
 .heading {
   position: absolute;
-  top: 7vh;
+  top: 3vh;
   font-size: 2vw;
   width: 25vw;
   text-align: center;
@@ -95,7 +94,7 @@ a {
 
 .form {
   position: absolute;
-  top: 19vh;
+  top: 11.5vh;
 }
 
 .username input {
@@ -108,16 +107,64 @@ a {
   font-weight: 400;
 }
 
+.name input {
+  width: 25vw;
+  height: 5vh;
+  border-radius: 2vh;
+  padding-left: 1vw;
+  background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+  position: absolute;
+  top: 8vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
 .password input {
   width: 25vw;
   height: 5vh;
   border-radius: 2vh;
   padding-left: 1vw;
   background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+  position: absolute;
+  top: 16vh;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+}
+
+.password2 input {
+  width: 25vw;
+  height: 5vh;
+  border-radius: 2vh;
+  padding-left: 1vw;
+  background: linear-gradient(to right, #f6c6b0, #f0f9ff);
   position: absolute;
-  top: 8vh;
+  top: 24vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.college input {
+  width: 25vw;
+  height: 5vh;
+  border-radius: 2vh;
+  padding-left: 1vw;
+  background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+  position: absolute;
+  top: 32vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.phone input {
+  width: 25vw;
+  height: 5vh;
+  border-radius: 2vh;
+  padding-left: 1vw;
+  background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+  position: absolute;
+  top: 40vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
 .submit button {
@@ -128,19 +175,19 @@ a {
   padding-top: 0.7vw;
   background: linear-gradient(to right, #f6c6b0, #f0f9ff);
   position: absolute;
-  top: 20vh;
+  top: 50vh;
   right: 10vw;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
 }
 
-.register {
+.login {
   position: absolute;
-  top: 14.5vh;
+  top: 46.5vh;
   right: 2vw;
 }
 
-.register a {
+.login a {
   color: black;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;

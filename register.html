@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/register.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Barlow:400,500|Open+Sans:400,600&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header>
       <nav class="nav-bar">
@@ -39,13 +40,16 @@
     <main>
       <div class="back">
         <img src="/assests/login_page.svg" alt="" class="image" />
-        <div class="login">
+        <div class="register">
           <div class="heading">
-            <p>USER LOGIN</p>
+            <p>REGISTER</p>
           </div>
-          <form action="./login" method="POST" class="form">
+          <form action="./register" method="POST" class="form">
             <div class="username">
               <input type="text" placeholder="Username" name="email" required />
+            </div>
+            <div class="name">
+              <input type="text" placeholder="Name" name="name" required />
             </div>
             <div class="password">
               <input
@@ -55,7 +59,31 @@
                 required
               />
             </div>
-            <div class="register"><a href="./register">Register</a></div>
+            <div class="password2 ">
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                name="password2"
+                required
+              />
+            </div>
+            <div class="college">
+              <input
+                type="text"
+                placeholder="College"
+                name="college"
+                required
+              />
+            </div>
+            <div class="phone">
+              <input
+                type="text"
+                placeholder="Phone Number"
+                name="phone"
+                required
+              />
+            </div>
+            <div class="login"><a href="./login">Login</a></div>
             <div class="submit">
               <button type="submit">Login</button>
             </div>
