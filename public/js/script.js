@@ -95,3 +95,24 @@ function register() {
   document.getElementById("rules").style.backgroundColor = "rgb(112, 13, 116)";
   document.getElementById("register").style.backgroundColor = "rgb(95, 27, 97)";
 }
+
+function eventCheck(event1, event2, event3, event4, event5, accommodation) {
+  if (event1 === 0) {
+    document.getElementById("event1").style.backgroundColor = "#CC3333";
+  }
+  if (event2 === 0) {
+    document.getElementById("event2").style.backgroundColor = "#CC3333";
+  }
+  if (event3 === 0) {
+    document.getElementById("event3").style.backgroundColor = "#CC3333";
+  }
+  if (event4 === 0) {
+    document.getElementById("event4").style.backgroundColor = "#CC3333";
+  }
+  if (event5 === 0) {
+    document.getElementById("event5").style.backgroundColor = "#CC3333";
+  }
+  if (accommodation === 0) {
+    document.getElementById("accommodation").style.backgroundColor = "#CC3333";
+  }
+}

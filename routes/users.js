@@ -12,15 +12,116 @@ app.use(express.static(path.join(__dirname, "./public/assests")));
 router.get("/register", (req, res) => {
   if (!req.session.user) {
     res.status(200).sendFile(path.join(__dirname + "/../register.html"));
-  } else res.status(401).send("Not possible as you are logged in already");
+  } else res.redirect("/users/dashboard");
 });
 
 router.get("/login", (req, res) => {
   if (!req.session.user)
     res.status(200).sendFile(path.join(__dirname + "/../login.html"));
-  else res.status(401).send("nope, logout");
+  else res.redirect("/users/dashboard");
 });
 
+router.get("/dashboard", (req, res) => {
+  if (req.session.user) {
+    req.session.user = user;
+    if (user.event1 === 0) {
+      event1 = "#CC3333";
+    } else {
+      event1 = "#33cc33";
+    }
+    if (user.event2 === 0) {
+      event2 = "#CC3333";
+    } else {
+      event2 = "#33cc33";
+    }
+    if (user.event3 === 0) {
+      event3 = "#CC3333";
+    } else {
+      event3 = "#33cc33";
+    }
+    if (user.event4 === 0) {
+      event4 = "#CC3333";
+    } else {
+      event4 = "#33cc33";
+    }
+    if (user.event5 === 0) {
+      event5 = "#CC3333";
+    } else {
+      event5 = "#33cc33";
+    }
+    if (user.accommodation === 0) {
+      accommodation = "#CC3333";
+    } else {
+      accommodation = "#33cc33";
+    }
+    res.render("dashboard", {
+      name: user.name,
+      college: user.college,
+      event1: event1,
+      event2: event2,
+      event3: event3,
+      event4: event4,
+      event5: event5,
+      accommodation: accommodation
+    });
+  } else res.redirect("/users/login");
+});
+
+router.post("/dashboard", (req, res) => {
+  let { but } = req.body;
+  let event1 = user.event1,
+    event2 = user.event2,
+    event3 = user.event3,
+    event4 = user.event4,
+    event5 = user.event5,
+    accommodation = user.accommodation;
+  switch (but) {
+    case "1":
+      if (event1 == 0) event1 = 1;
+      else event1 = 0;
+      break;
+    case "2":
+      if (event2 == 0) event2 = 1;
+      else event2 = 0;
+      break;
+    case "3":
+      if (event3 == 0) event3 = 1;
+      else event3 = 0;
+      break;
+    case "4":
+      if (event4 == 0) event4 = 1;
+      else event4 = 0;
+      break;
+    case "5":
+      if (event5 == 0) event5 = 1;
+      else event5 = 0;
+      break;
+    case "6":
+      if (accommodation == 0) accommodation = 1;
+      else accommodation = 0;
+      break;
+  }
+  email = user.email;
+  mySqlConnection.query(
+    "UPDATE users SET event1=?, event2=?, event3=?, event4=?, event5=?, accommodation=? WHERE email = ?",
+    [event1, event2, event3, event4, event5, accommodation, user.email],
+    err => {
+      if (err) res.status(500).send(err);
+      mySqlConnection.query(
+        "SELECT * FROM users WHERE email = ?",
+        [email],
+        (err, rows) => {
+          if (err) res.status(500).send(err);
+          user = rows[0];
+          if (user) {
+            req.session.user = user;
+            res.redirect("/users/dashboard");
+          }
+        }
+      );
+    }
+  );
+});
 // Registration Page
 router.post("/register", (req, res) => {
   let { email, name, password, password2, college, phone } = req.body;
@@ -81,8 +182,7 @@ router.post("/register", (req, res) => {
 
         mySqlConnection.query(sql, [values], function(err) {
           if (err) res.status(500).send(err);
-          else
-            res.status(200).sendFile(path.join(__dirname + "/../login.html"));
+          else res.redirect("/users/login");
         });
       }
     }
@@ -103,12 +203,7 @@ router.post("/login", (req, res) => {
         password = bcrypt.hashSync(password, 10);
         if (result) {
           req.session.user = user;
-          // res.render("participant_portal", {
-          //   name: "abc",
-          //   roll: "2019BCS-XXX",
-          //   sem: "I"
-          // });
-          res.status(200).sendFile(path.join(__dirname + "/../home.html"));
+          res.redirect("/users/dashboard");
         } else {
           res.status(400).send("pwd incorrect");
         }
@@ -122,10 +217,8 @@ router.post("/login", (req, res) => {
 router.get("/logout", (req, res) => {
   if (req.session.user) {
     req.session.destroy(() => {
-      res.status(200).send("logout success");
+      res.redirect("/");
     });
-  } else {
-    res.status(400).send("you are not logged in");
   }
 });
 

@@ -1,0 +1,118 @@
+<header>
+  <nav class="nav-bar">
+    <a href="/"><img src="../assests/logo.png" alt="Logo" class="logo"/></a>
+    <ul>
+      <li>
+        <a href="/">HOME</a>
+      </li>
+      <li style="right: 48.5vw;">
+        <a href="./users/login">LOGIN/REGISTER</a>
+      </li>
+      <li style="right: 39.5vw;">
+        <a href="../event-list">EVENTS</a>
+      </li>
+      <li style="right: 28.5vw;">
+        <a href="../schedule">SCHEDULE</a>
+      </li>
+      <li style="right: 12vw;">
+        <a href="#">ACCOMMODATION</a>
+      </li>
+      <li style="right: 0vw;">
+        <a href="#">CONTACT US</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="sidebox">
+    <img src="../assests/profile.svg" alt="" class="photo" />
+    <div class="greet">
+      <p>Hello, <%=name%>!</p>
+    </div>
+    <div class="desc">Lorem, ipsum dolor.</div>
+    <div class="logout"><a href="./logout">LOGOUT</a></div>
+  </div>
+  <div class="back">
+    <div class="dash">
+      <p class="dash-1">TECH FEST</p>
+      <p class="dash-2">DASHBOARD</p>
+      <p class="dash-3">PARTICIPANT PORTAL</p>
+    </div>
+    <div class="name">
+      <p class="name-1">FULL NAME:</p>
+      <p class="name-2"><%=name%></p>
+    </div>
+    <div class="college">
+      <p class="college-1">COLLEGE:</p>
+      <p class="college-2"><%=college%></p>
+    </div>
+    <div class="events">
+      <div class="event-head">
+        <p>EVENTS REGISTERED:</p>
+      </div>
+      <form action="./dashboard" method="POST">
+        <div class="event1">
+          <label for="event1">EVENT-1: CODING</label>
+          <button
+            name="but"
+            id="event1"
+            style="background-color: <%=event1%>;"
+            value="1"
+          ></button>
+        </div>
+        <div class="event2">
+          <label for="event2">EVENT-2: CODING</label>
+          <button
+            name="but"
+            id="event2"
+            style="background-color: <%=event2%>;"
+            value="2"
+          ></button>
+        </div>
+        <div class="event3">
+          <label for="event3">EVENT-3: CODING</label>
+          <button
+            name="but"
+            id="event3"
+            style="background-color: <%=event3%>;"
+            value="3"
+          ></button>
+        </div>
+        <div class="event4">
+          <label for="event4">EVENT-4: CODING</label>
+          <button
+            name="but"
+            id="event4"
+            style="background-color: <%=event4%>;"
+            value="4"
+          ></button>
+        </div>
+        <div class="event5">
+          <label for="event5">EVENT-5: CODING</label>
+          <button
+            name="but"
+            id="event5"
+            style="background-color: <%=event5%>;"
+            value="5"
+          ></button>
+        </div>
+      </form>
+    </div>
+    <div class="acco">
+      <div class="acco-head">
+        <p>ACCOMMODATION:</p>
+      </div>
+      <form action="./dashboard" method="POST">
+        <div class="accommodation">
+          <label for="accommodation">BOOKED</label>
+          <button
+            name="but"
+            id="accommodation"
+            style="background-color: <%=accommodation%>;"
+            value="6"
+          ></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
