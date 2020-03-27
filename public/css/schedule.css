@@ -83,6 +83,7 @@ a {
     "A A A A"
     "A A A A"
     "A A A A";
+  font-size: 1.4vw;
 }
 
 .head {
@@ -113,4 +114,26 @@ a {
   align-content: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 450px) {
+  .background {
+    top: 18vh;
+  }
+
+  header {
+    height: 6vh;
+  }
+
+  .nav-bar {
+    top: 1vh;
+  }
+
+  li {
+    font-size: 1.65vw;
+  }
+
+  .grid-container {
+    font-size: 2.2vw;
+  }
 }
