@@ -40,7 +40,7 @@ ul {
   right: 2.5vw;
   top: 2vh;
   list-style: none;
-  width: 68vw;
+  width: 69vw;
 }
 
 li {
@@ -144,4 +144,100 @@ a {
   color: black;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 450px) {
+  .background {
+    top: 18vh;
+  }
+
+  header {
+    height: 6vh;
+  }
+
+  .nav-bar {
+    top: 1vh;
+  }
+
+  li {
+    font-size: 1.65vw;
+  }
+
+  .image {
+    position: absolute;
+    top: 50vh;
+    left: 27vw;
+    width: 33vw;
+  }
+
+  .login {
+    position: absolute;
+    top: 0vh;
+    right: 70vw;
+  }
+
+  .heading {
+    position: absolute;
+    top: 7vh;
+    font-size: 6vw;
+    width: 50vw;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+  }
+
+  .form {
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+  }
+
+  .username input {
+    width: 40vw;
+    height: 5vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .password input {
+    width: 40vw;
+    height: 5vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    position: absolute;
+    top: 8vh;
+  }
+
+  .submit button {
+    width: 25vw;
+    height: 5vh;
+    border-radius: 2vh;
+    padding: 1vw;
+    padding-top: 0.7vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+  }
+
+  .register {
+    position: absolute;
+    top: 14.5vh;
+    right: 2vw;
+  }
+
+  .register a {
+    font-size: 3vw;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  }
 }
