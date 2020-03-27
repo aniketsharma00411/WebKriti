@@ -1,6 +1,5 @@
 html {
   height: 100%;
-  width: 100vw;
 }
 
 * {
@@ -191,4 +190,148 @@ a {
   color: black;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 450px) {
+  .background {
+    top: 18vh;
+  }
+
+  header {
+    height: 6vh;
+  }
+
+  .nav-bar {
+    top: 1vh;
+  }
+
+  li {
+    font-size: 1.65vw;
+  }
+
+  .image {
+    position: absolute;
+    top: 55vh;
+    left: 28vw;
+    width: 27vw;
+  }
+
+  .register {
+    position: absolute;
+    top: 0vh;
+    right: 65vw;
+  }
+
+  .heading {
+    position: absolute;
+    top: 3vh;
+    left: 5vw;
+    font-size: 6vw;
+    width: 25vw;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+  }
+
+  .form {
+    position: absolute;
+    top: 10vh;
+  }
+
+  .username input {
+    width: 40vw;
+    height: 4vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .name input {
+    width: 40vw;
+    height: 4vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    position: absolute;
+    top: 6vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .password input {
+    width: 40vw;
+    height: 4vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    position: absolute;
+    top: 12vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .password2 input {
+    width: 40vw;
+    height: 4vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    position: absolute;
+    top: 18vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .college input {
+    width: 40vw;
+    height: 4vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    position: absolute;
+    top: 24vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .phone input {
+    width: 40vw;
+    height: 4vh;
+    border-radius: 2vh;
+    padding-left: 1vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    position: absolute;
+    top: 30vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .submit button {
+    width: 25vw;
+    height: 4vh;
+    border-radius: 2vh;
+    padding: 1vw;
+    padding-top: 0.7vw;
+    background: linear-gradient(to right, #f6c6b0, #f0f9ff);
+    position: absolute;
+    top: 38vh;
+    right: 10vw;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+  }
+
+  .login {
+    position: absolute;
+    top: 34vh;
+    right: 2vw;
+  }
+
+  .login a {
+    font-size: 3vw;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  }
 }
