@@ -100,7 +100,7 @@ a {
   color: #ffffff;
 }
 
-footer {
+.footer {
   background-color: #2669b6;
   position: absolute;
   top: 100vh;
@@ -118,7 +118,7 @@ footer {
   font-weight: 700;
 }
 
-footer img {
+.footer img {
   width: 4vw;
   position: absolute;
   top: 24.5vh;
@@ -146,4 +146,110 @@ footer img {
   position: absolute;
   top: 36vh;
   left: 53vw;
+}
+
+.college {
+  position: absolute;
+  right: 12vw;
+  top: 18vh;
+}
+
+@media only screen and (max-width: 450px) {
+  .background {
+    top: 18vh;
+  }
+
+  header {
+    height: 6vh;
+  }
+
+  .nav-bar {
+    top: 1vh;
+  }
+
+  li {
+    font-size: 1.65vw;
+  }
+
+  .info {
+    width: 90vw;
+    position: absolute;
+    top: 22vh;
+    align-items: center;
+    left: 5vw;
+  }
+
+  .tech {
+    position: absolute;
+    left: 5vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 8vw;
+  }
+
+  .fest {
+    position: absolute;
+    top: 6vh;
+    left: 5vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #00ffff;
+    font-size: 8vw;
+  }
+
+  .info-info {
+    position: absolute;
+    top: 25vh;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+  }
+
+  .footer {
+    background-color: #2669b6;
+    position: absolute;
+    top: 70vh;
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .connect {
+    display: none;
+  }
+
+  .footer img {
+    width: 4vw;
+    position: absolute;
+    top: 17vh;
+  }
+
+  .faq {
+    font-size: 2vw;
+    color: white;
+    position: absolute;
+    top: 8vh;
+    left: 15vw;
+  }
+
+  .find {
+    font-size: 2vw;
+    color: white;
+    position: absolute;
+    top: 8vh;
+    left: 46vw;
+  }
+
+  .sponsors {
+    font-size: 2vw;
+    color: white;
+    position: absolute;
+    top: 8vh;
+    left: 80vw;
+  }
+
+  .college {
+    top: 17vh;
+    right: 20vw;
+  }
 }
