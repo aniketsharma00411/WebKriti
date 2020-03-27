@@ -4,16 +4,14 @@
   border: 0;
 }
 
-.background {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 480px;
-  height: 360px;
-}
-
 body::-webkit-scrollbar {
   display: none;
+}
+
+header {
+  background-color: #32323f;
+  width: 100vw;
+  height: 10vh;
 }
 
 .nav-bar {
@@ -45,12 +43,20 @@ li {
 
 a {
   text-decoration: none;
-  font-weight: bold;
-  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .nav-bar ul li a:hover {
   text-decoration: underline;
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35vw;
 }
 
 .event-box {
@@ -59,8 +65,8 @@ a {
   left: 9vw;
   width: 45vw;
   height: 65vh;
-  background-color: rgb(7, 79, 100);
-  border-radius: 15%;
+  background-color: #074f64;
+  border-radius: 5vh;
 }
 
 #event-head {
@@ -69,9 +75,10 @@ a {
   text-align: center;
   font-size: 3vw;
   color: #ffffff;
-  /* background-color: rgb(146, 153, 173); */
   width: 45vw;
   height: 7vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 #event-info {
@@ -81,22 +88,24 @@ a {
   padding-right: 1.5vw;
   text-align: center;
   color: #ffffff;
-  /* background-color: rosybrown; */
   font-size: 1.2vw;
   width: 42vw;
   height: 26vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .register {
   text-align: center;
   position: absolute;
-  top: 47vh;
+  top: 55vh;
   left: 13.5vw;
   font-size: 1.5vw;
-  background-color: pink;
-  border-radius: 25%;
+  background-color: #ffc0cb;
+  border-radius: 2vh;
   width: 15vw;
   height: 4.3vh;
+  color: #000000;
 }
 
 button:hover {
@@ -109,17 +118,17 @@ button:hover {
   left: 26vw;
   width: 8vw;
   height: 4vh;
-  background-color: blue;
 }
 
 #left-button,
 #right-button {
-  /* border-radius: 100%; */
   position: absolute;
   width: 4vw;
   height: 4vh;
   font-size: 1.3vw;
-  background-color: pink;
+  background-color: #ffc0cb;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 #right-button {

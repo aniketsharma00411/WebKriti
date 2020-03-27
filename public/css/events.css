@@ -1,19 +1,25 @@
+html {
+  height: 100%;
+}
+
 * {
   padding: 0;
   margin: 0;
   border: 0;
 }
 
-.background {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 480px;
-  height: 360px;
+body {
+  background: linear-gradient(to right, #545cda, #49d2ff);
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+header {
+  background-color: #32323f;
+  width: 100vw;
+  height: 10vh;
 }
 
 .nav-bar {
@@ -45,8 +51,9 @@ li {
 
 a {
   text-decoration: none;
-  font-weight: bold;
-  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .nav-bar ul li a:hover {
@@ -59,7 +66,6 @@ a {
   left: 9vw;
   width: 81vw;
   height: 70vh;
-  background-color: rgb(112, 13, 116);
   border-radius: 5%;
 }
 
@@ -69,9 +75,10 @@ a {
   text-align: center;
   font-size: 3vw;
   color: #ffffff;
-  /* background-color: rgb(146, 153, 173); */
   width: 81vw;
   height: 7vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 .info-buttons {
@@ -87,7 +94,8 @@ a {
   padding-top: 1vh;
   position: absolute;
   left: 0;
-  background-color: rgb(95, 27, 97);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 #rules {
@@ -96,7 +104,8 @@ a {
   padding-top: 1vh;
   position: absolute;
   left: 27vw;
-  background-color: rgb(112, 13, 116);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 #register {
@@ -105,7 +114,8 @@ a {
   padding-top: 1vh;
   position: absolute;
   left: 54vw;
-  background-color: rgb(112, 13, 116);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 #event-info {
@@ -115,11 +125,12 @@ a {
   padding-right: 1.5vw;
   padding-top: 3vh;
   text-align: center;
-  color: #c2b5b5;
-  background-color: rgb(95, 27, 97);
+  color: #ffffff;
   font-size: 1.2vw;
   width: 81w;
   height: 53vh;
   border-bottom-right-radius: 5%;
   border-bottom-left-radius: 5%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
