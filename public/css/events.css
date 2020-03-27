@@ -134,3 +134,54 @@ a {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
+
+@media (orientation: portrait) {
+  .background {
+    display: none;
+  }
+
+  header {
+    height: 6vh;
+  }
+
+  .nav-bar {
+    top: 1vh;
+  }
+
+  li {
+    font-size: 1.65vw;
+  }
+
+  #event-head {
+    position: absolute;
+    top: 3vh;
+    text-align: center;
+    font-size: 9vw;
+    color: #ffffff;
+    width: 81vw;
+    height: 7vh;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  #event-info {
+    position: absolute;
+    top: 17vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 3vh;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2vw;
+    width: 81w;
+    height: 53vh;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+
+  .info-buttons {
+    font-size: 4vw;
+  }
+}
