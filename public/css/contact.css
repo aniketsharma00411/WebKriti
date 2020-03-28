@@ -1,0 +1,266 @@
+html {
+  height: 100%;
+  width: 100vw;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: #f7f7f0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  background-color: #32323f;
+  width: 100vw;
+  height: 10vh;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 2vh;
+  width: 100vw;
+}
+
+.logo {
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+  height: 10vh;
+}
+
+ul {
+  position: absolute;
+  right: 2.5vw;
+  top: 2vh;
+  list-style: none;
+  width: 69vw;
+}
+
+li {
+  display: inline;
+  position: absolute;
+  font-size: 1.3vw;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+.background img {
+  height: 90vh;
+  position: absolute;
+  top: 10vh;
+  right: 0;
+}
+
+.box {
+  width: 45vw;
+  position: absolute;
+  left: 7vw;
+  top: 35vh;
+  border-radius: 2vh;
+  height: 45vh;
+  box-shadow: 1vh 1vh 1vh 0.2vh #888888;
+  font-size: 2.8vh;
+  background: linear-gradient(to right, #ffffff, #fbfbfb, #e1e1e1);
+}
+
+.head {
+  position: absolute;
+  top: 4vh;
+  left: 2vw;
+  font-size: 4.5vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.name img,
+.mail img,
+.address img {
+  width: 2vw;
+}
+
+.name {
+  position: absolute;
+  top: 16vh;
+  left: 2vw;
+}
+
+.name-1 {
+  position: absolute;
+  top: -2vh;
+  width: 40vw;
+  left: 3vw;
+  font-size: 2.7vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.name-2 {
+  position: absolute;
+  top: 2vh;
+  width: 40vw;
+  left: 3vw;
+  font-size: 2.7vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.mail {
+  position: absolute;
+  top: 26vh;
+  left: 2vw;
+}
+
+.mail p {
+  position: absolute;
+  top: 0;
+  width: 40vw;
+  left: 3vw;
+  font-size: 2.7vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.address {
+  position: absolute;
+  top: 34vh;
+  left: 2vw;
+}
+
+.address p {
+  position: absolute;
+  top: 1vh;
+  width: 40vw;
+  left: 3vw;
+  font-size: 2.7vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.plane img {
+  width: 4vw;
+  position: absolute;
+  bottom: 2vh;
+  right: 2vw;
+}
+
+@media only screen and (orientation: portrait) {
+  .background img {
+    width: 100vw;
+    top: 35vh;
+  }
+
+  body {
+    background: linear-gradient(to right, #545cda, #49d2ff);
+  }
+
+  header {
+    height: 6vh;
+  }
+
+  .nav-bar {
+    top: 1vh;
+  }
+
+  li {
+    font-size: 1.65vw;
+  }
+
+  .box {
+    width: 86vw;
+    position: absolute;
+    left: 7vw;
+    top: 15vh;
+    border-radius: 2vh;
+    height: 45vh;
+    box-shadow: 1vh 1vh 1vh 0.2vh #888888;
+    font-size: 2.8vh;
+    background: linear-gradient(to right, #ffffff, #fbfbfb, #e1e1e1);
+  }
+
+  .head {
+    position: absolute;
+    top: 4vh;
+    left: 2vw;
+    font-size: 7vw;
+  }
+
+  .name img,
+  .mail img,
+  .address img {
+    width: 6vw;
+  }
+
+  .name {
+    position: absolute;
+    top: 16vh;
+    left: 2vw;
+  }
+
+  .name-1 {
+    position: absolute;
+    top: -1vh;
+    width: 79vw;
+    left: 10vw;
+    font-size: 4.5vw;
+  }
+
+  .name-2 {
+    position: absolute;
+    top: 3vh;
+    width: 79vw;
+    left: 10vw;
+    font-size: 4.5vw;
+  }
+
+  .mail {
+    position: absolute;
+    top: 26vh;
+    left: 2vw;
+  }
+
+  .mail p {
+    position: absolute;
+    top: 0;
+    width: 79vw;
+    left: 10vw;
+    font-size: 4.5vw;
+  }
+
+  .address {
+    position: absolute;
+    top: 34vh;
+    left: 2vw;
+  }
+
+  .address p {
+    position: absolute;
+    top: 0;
+    width: 79vw;
+    left: 10vw;
+    font-size: 4.5vw;
+  }
+
+  .plane img {
+    width: 6vw;
+    position: absolute;
+    bottom: 2vh;
+    right: 4vw;
+  }
+}
