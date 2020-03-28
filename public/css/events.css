@@ -31,8 +31,8 @@ header {
 .logo {
   position: absolute;
   left: 1vw;
-  top: 1vh;
-  height: 10vh;
+  top: -1vh;
+  height: 8vh;
 }
 
 ul {
@@ -146,6 +146,11 @@ a {
 
   .nav-bar {
     top: 1vh;
+  }
+
+  .logo {
+    height: 4vh;
+    top: 0;
   }
 
   li {
