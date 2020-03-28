@@ -34,4 +34,19 @@ router.get("/schedule", (req, res) =>
   res.status(200).sendFile(path.join(__dirname + "/../schedule.html"))
 );
 
+router.get("/accommodation", (req, res) =>
+  res.status(200).sendFile(path.join(__dirname + "/../accommodation.html"))
+);
+
+router.get("/contact", (req, res) =>
+  res.status(200).sendFile(path.join(__dirname + "/../contact.html"))
+);
+
+router.get("/faq", (req, res) =>
+  res.status(200).sendFile(path.join(__dirname + "/../faq.html"))
+);
+
+router.get("/sponsors", (req, res) =>
+  res.status(200).sendFile(path.join(__dirname + "/../sponsors.html"))
+);
 module.exports = router;

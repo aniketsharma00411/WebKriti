@@ -1,0 +1,206 @@
+html {
+  height: 100%;
+  width: 100vw;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: #25c5d9;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  background-color: #32323f;
+  width: 100vw;
+  height: 10vh;
+}
+.nav-bar {
+  position: absolute;
+  top: 2vh;
+  width: 100vw;
+}
+
+.logo {
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+  height: 10vh;
+}
+
+ul {
+  position: absolute;
+  right: 2.5vw;
+  top: 2vh;
+  list-style: none;
+  width: 69vw;
+}
+
+li {
+  display: inline;
+  position: absolute;
+  font-size: 1.3vw;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+.top {
+  position: absolute;
+  top: 10vh;
+  width: 60vw;
+  height: 30vh;
+  background-color: #4dcfe1;
+  color: #ffffff;
+}
+
+.top h1 {
+  position: absolute;
+  top: 6.5vh;
+  left: 5vw;
+  font-size: 3.5vw;
+}
+
+.side img {
+  height: 90vh;
+  position: absolute;
+  top: 10vh;
+  left: 60vw;
+}
+
+.bottom {
+  height: 53vh;
+  width: 60vw;
+  position: absolute;
+  top: 47vh;
+  left: 5vw;
+}
+
+.ques1,
+.ques2,
+.ques3,
+.ques4 {
+  position: relative;
+}
+
+.ques1 {
+  top: 0;
+}
+
+.ques2 {
+  top: 5vh;
+}
+
+.ques3 {
+  top: 10vh;
+}
+
+.ques4 {
+  top: 15vh;
+}
+
+.bullet {
+  height: 2.5vw;
+}
+
+p {
+  position: absolute;
+  top: 0;
+  left: 3.7vw;
+  font-size: 2.8vh;
+}
+
+@media only screen and (orientation: portrait) {
+  .background {
+    top: 18vh;
+  }
+
+  header {
+    height: 6vh;
+  }
+
+  .nav-bar {
+    top: 1vh;
+  }
+
+  li {
+    font-size: 1.65vw;
+  }
+
+  .top {
+    position: absolute;
+    top: 6vh;
+    width: 100vw;
+    height: 20vh;
+    background-color: #4dcfe1;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .top h1 {
+    position: absolute;
+    top: 4vh;
+    font-size: 8vw;
+  }
+
+  .side img {
+    display: none;
+  }
+
+  .bottom {
+    height: 54vh;
+    width: 95vw;
+    position: absolute;
+    top: 36vh;
+    left: 5vw;
+  }
+
+  .ques1,
+  .ques2,
+  .ques3,
+  .ques4 {
+    position: relative;
+  }
+
+  .ques1 {
+    top: 0;
+  }
+
+  .ques2 {
+    top: 10vh;
+  }
+
+  .ques3 {
+    top: 20vh;
+  }
+
+  .ques4 {
+    top: 30vh;
+  }
+
+  .bullet {
+    height: 2.5vw;
+  }
+
+  p {
+    position: absolute;
+    top: 0;
+    left: 3.7vw;
+    font-size: 2.8vh;
+  }
+}
