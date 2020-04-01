@@ -132,11 +132,11 @@ router.post("/register", (req, res) => {
     event5 = 0,
     accommodation = 0;
 
+  let errors = [];
+
   if (password.length < 6) {
     errors.push({ msg: "Password must be at least 6 characters" });
   }
-
-  let errors = [];
 
   if (!name || !email || !password || !password2 || !college || !phone) {
     errors.push({ msg: "Please enter all fields" });

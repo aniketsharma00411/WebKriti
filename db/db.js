@@ -3,11 +3,11 @@ const mysql = require("mysql");
 const mySqlConnection = mysql.createConnection({
   host: "sql12.freemysqlhosting.net",
 
-  user: "sql12329461",
+  user: "sql12330532",
 
-  password: "KxYaTdMATW",
+  password: "qFLN9956zl",
 
-  database: "sql12329461"
+  database: "sql12330532"
 });
 
 mySqlConnection.connect(err => {
